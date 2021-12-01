@@ -28,6 +28,8 @@ linter:
     require_trailing_commas: true
     always_put_required_named_parameters_first: true
     always_put_control_body_on_new_line: true
+    camel_case_types: true
+    camel_case_extensions: true
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
