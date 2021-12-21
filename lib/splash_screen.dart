@@ -42,10 +42,13 @@ class _SplashScreenState extends State<SplashScreen> {
             color: kOrangeFlame,
             size: double.infinity,
           ),
-          const CircleAvatar(
-            radius: 24.0,
-            backgroundImage: AssetImage(
-              'assets/icons/plotsklappsIcon.png',
+          const Hero(
+            tag: 'plotsklappsicon',
+            child: CircleAvatar(
+              radius: 48.0,
+              backgroundImage: AssetImage(
+                'assets/icons/plotsklappsIcon.png',
+              ),
             ),
           )
         ],

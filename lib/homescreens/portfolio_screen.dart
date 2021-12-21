@@ -198,6 +198,67 @@ class PortfolioScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                18.0,
+                0.0,
+                18.0,
+                0.0,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Card(
+                      child: Column(
+                        children: [
+                          const ListTile(
+                            leading: CircleAvatar(
+                              backgroundImage: AssetImage(
+                                'assets/icons/plotsklappsIcon.png',
+                              ),
+                            ),
+                            title: Text('Flutter Bootcamp Projects'),
+                            subtitle: Text(
+                              'Learning path apps',
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text(
+                              'Everyone has got to start somewhere... right? Please have a look at my beginner projects which I\'ve styled to my liking. They should give you an impression of what I\'m capable of now!',
+                            ),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.start,
+                            children: [
+                              const Text(
+                                'Portfolio Carousel will appear here...',
+                              ),
+                              Align(
+                                alignment: Alignment.center,
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Dicee(),
+                                      ),
+                                    );
+                                  },
+                                  child: const Text(
+                                    'Magic Button',
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

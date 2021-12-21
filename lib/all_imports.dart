@@ -1,6 +1,7 @@
 /*NATIVE FLUTTER & DART PACKAGES*/
 export 'package:flutter/material.dart';
 export 'dart:async';
+export 'dart:math';
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:url_launcher/url_launcher.dart';
@@ -26,3 +27,4 @@ export 'package:showoff/homescreens/businesscard_screen.dart';
 export 'package:showoff/homescreens/education_screen.dart';
 export 'package:showoff/homescreens/portfolio_screen.dart';
 export 'package:showoff/homescreens/contact_screen.dart';
+export 'package:showoff/bootcamp_pages/dicee.dart';
