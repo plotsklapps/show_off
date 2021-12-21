@@ -27,7 +27,7 @@ class _ContactScreenState extends State<ContactScreen> {
               alignment: Alignment.center,
               children: [
                 SpinKitDoubleBounce(
-                  color: kColorDarkGreen,
+                  color: kOrangeFlame,
                   size: 50.0,
                 ),
                 GestureDetector(

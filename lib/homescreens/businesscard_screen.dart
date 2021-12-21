@@ -1,6 +1,6 @@
 import 'package:showoff/all_imports.dart';
 
-String websiteURL = 'https://plotsklapps.jimdosite.com/';
+String websiteURL = 'https://plotsklapps.github.io/';
 String githubURL = 'https://github.com/plotsklapps';
 String hashnodeURL = 'https://plotsklapps.hashnode.dev/';
 String twitterURL = 'https://twitter.com/plotsklapps';
@@ -30,14 +30,14 @@ class BusinessCardScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const FittedBox(
-                  fit: BoxFit.contain,
-                  child: Text(
-                    ':plotsklapps',
-                    style: TextStyle(
-                      fontSize: 64.0,
+                Row(
+                  children: [
+                    Expanded(
+                      child: Image.asset(
+                        'assets/icons/plotsklappsLogoApp.png',
+                      ),
                     ),
-                  ),
+                  ],
                 ),
                 const Divider(
                   thickness: 2.0,
@@ -84,11 +84,12 @@ class BusinessCardScreen extends StatelessWidget {
               children: <Widget>[
                 Card(
                   child: GestureDetector(
-                    child: const ListTile(
+                    child: ListTile(
                       leading: Icon(
                         FontAwesomeIcons.home,
+                        color: kOrangeFlame,
                       ),
-                      title: Text('Visit my website'),
+                      title: const Text('Visit my website'),
                     ),
                     onTap: () {
                       launchWebsite();
@@ -97,11 +98,12 @@ class BusinessCardScreen extends StatelessWidget {
                 ),
                 Card(
                   child: GestureDetector(
-                    child: const ListTile(
+                    child: ListTile(
                       leading: Icon(
                         FontAwesomeIcons.github,
+                        color: kOrangeFlame,
                       ),
-                      title: Text('Clone my repo\'s'),
+                      title: const Text('Clone my repo\'s'),
                     ),
                     onTap: () {
                       launchGithub();
@@ -110,11 +112,12 @@ class BusinessCardScreen extends StatelessWidget {
                 ),
                 Card(
                   child: GestureDetector(
-                    child: const ListTile(
+                    child: ListTile(
                       leading: Icon(
                         FontAwesomeIcons.slackHash,
+                        color: kOrangeFlame,
                       ),
-                      title: Text('Read my blog'),
+                      title: const Text('Read my blog'),
                     ),
                     onTap: () {
                       launchHashnode();
@@ -123,11 +126,12 @@ class BusinessCardScreen extends StatelessWidget {
                 ),
                 Card(
                   child: GestureDetector(
-                    child: const ListTile(
+                    child: ListTile(
                       leading: Icon(
                         FontAwesomeIcons.twitter,
+                        color: kOrangeFlame,
                       ),
-                      title: Text('Find me on Twitter'),
+                      title: const Text('Find me on Twitter'),
                     ),
                     onTap: () {
                       launchTwitter();

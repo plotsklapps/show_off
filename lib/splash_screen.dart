@@ -39,13 +39,13 @@ class _SplashScreenState extends State<SplashScreen> {
         alignment: Alignment.center,
         children: [
           SpinKitDoubleBounce(
-            color: kColorDarkGreen,
+            color: kOrangeFlame,
             size: double.infinity,
           ),
           const CircleAvatar(
             radius: 24.0,
             backgroundImage: AssetImage(
-              'assets/icons/plotsklappsiconblack.png',
+              'assets/icons/plotsklappsIcon.png',
             ),
           )
         ],

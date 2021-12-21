@@ -52,15 +52,15 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.fromLTRB(
-            2.0,
-            2.0,
+            8.0,
             0.0,
-            4.0,
+            0.0,
+            8.0,
           ),
           child: GestureDetector(
             child: const CircleAvatar(
               backgroundImage: AssetImage(
-                'assets/icons/plotsklappsiconblack.png',
+                'assets/icons/plotsklappsIcon.png',
               ),
             ),
             onTap: () {

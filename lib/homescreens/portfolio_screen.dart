@@ -52,7 +52,7 @@ class PortfolioScreen extends StatelessWidget {
                           const ListTile(
                             leading: CircleAvatar(
                               backgroundImage: AssetImage(
-                                'assets/icons/plotsklappsiconblack.png',
+                                'assets/icons/trdlToolIcon.png',
                               ),
                             ),
                             title: Text('TRDL-tool'),
@@ -106,7 +106,7 @@ class PortfolioScreen extends StatelessWidget {
                           const ListTile(
                             leading: CircleAvatar(
                               backgroundImage: AssetImage(
-                                'assets/icons/plotsklappsiconblack.png',
+                                'assets/icons/plotsklappsIcon.png',
                               ),
                             ),
                             title: Text('Example 2'),
@@ -160,7 +160,7 @@ class PortfolioScreen extends StatelessWidget {
                           const ListTile(
                             leading: CircleAvatar(
                               backgroundImage: AssetImage(
-                                'assets/icons/plotsklappsiconblack.png',
+                                'assets/icons/plotsklappsIcon.png',
                               ),
                             ),
                             title: Text('Example 3'),

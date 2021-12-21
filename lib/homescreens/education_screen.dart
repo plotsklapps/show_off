@@ -24,11 +24,11 @@ class EducationScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Divider(
+              children: <Widget>[
+                const Divider(
                   thickness: 2.0,
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     '2020',
@@ -44,10 +44,11 @@ class EducationScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
+                      color: kOrangeFlame,
                     ),
                   ),
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     'Marc Opmeer - NHA',
@@ -56,7 +57,7 @@ class EducationScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 2.0,
                 ),
               ],
@@ -117,11 +118,11 @@ class EducationScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Divider(
+              children: <Widget>[
+                const Divider(
                   thickness: 2.0,
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     '2021',
@@ -137,10 +138,11 @@ class EducationScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
+                      color: kOrangeFlame,
                     ),
                   ),
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     'Angela Yu - Udemy',
@@ -149,7 +151,7 @@ class EducationScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 2.0,
                 ),
               ],
@@ -210,11 +212,11 @@ class EducationScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Divider(
+              children: <Widget>[
+                const Divider(
                   thickness: 2.0,
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     '2021',
@@ -230,10 +232,11 @@ class EducationScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
+                      color: kOrangeFlame,
                     ),
                   ),
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     'Tiberiu Potec - Udemy',
@@ -242,7 +245,7 @@ class EducationScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 2.0,
                 ),
               ],
@@ -303,11 +306,11 @@ class EducationScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Divider(
+              children: <Widget>[
+                const Divider(
                   thickness: 2.0,
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     '2022',
@@ -323,10 +326,11 @@ class EducationScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
+                      color: kOrangeFlame,
                     ),
                   ),
                 ),
-                FittedBox(
+                const FittedBox(
                   fit: BoxFit.contain,
                   child: Text(
                     'Bryan Cairns - Udemy',
@@ -335,7 +339,7 @@ class EducationScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   thickness: 2.0,
                 ),
               ],

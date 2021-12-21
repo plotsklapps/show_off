@@ -5,6 +5,11 @@ Color kColorMediumGreen = const Color(0xFF669573);
 Color kColorLightGreen = const Color(0xFFEDF2EE);
 Color kColorErrorRed = const Color(0xFF790000);
 
+Color kOrangeFlame = const Color(0xFFD35A27);
+Color kGreyGunmetal = const Color(0xff172734);
+Color kGreyCharcoal = const Color(0xff32434f);
+Color kGreyElectricBlue = const Color(0xff526e7f);
+
 const kDarkGreen = 0xFF004E14;
 const kLightGreen = 0xFF738E7E;
 const kSecondaryGreen = 0xFF2F3E32;
