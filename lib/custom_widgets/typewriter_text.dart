@@ -1,6 +1,6 @@
 import 'package:showoff/all_imports.dart';
 
-/*TYPEWRITER WIDGET*/
+/*TYPEWRITER WIDGET BUSINESSCARD*/
 class TypeWriterWidget extends StatelessWidget {
   const TypeWriterWidget({
     Key? key,

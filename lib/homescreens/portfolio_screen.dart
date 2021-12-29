@@ -52,36 +52,69 @@ class PortfolioScreen extends StatelessWidget {
                           const ListTile(
                             leading: CircleAvatar(
                               backgroundImage: AssetImage(
-                                'assets/icons/trdlToolIcon.png',
+                                'assets/icons/plotsklappsIcon.png',
                               ),
                             ),
-                            title: Text('TRDL-tool'),
+                            title: Text('Flutter Bootcamp Projects'),
                             subtitle: Text(
-                              'Train dispatchers tool (NL)',
+                              'Learning path \'apps\'',
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              'An application for train dispatchers in the Netherlands to quickly access their work instructions and background information. It includes a fast-paced quiz to test their knowledge and a chat functionality to contact each other',
+                              'Everyone has got to start somewhere... right? Please have a look at my beginner projects which I\'ve styled to my liking. They should give you an impression of what I\'m capable of now!',
                             ),
                           ),
-                          ButtonBar(
-                            alignment: MainAxisAlignment.start,
-                            children: [
-                              TextButton(
-                                onPressed: () {
-                                  launchTrdlTool();
+                          CarouselSlider(
+                            options: CarouselOptions(
+                              height: 200.0,
+                              autoPlay: true,
+                              autoPlayCurve: Curves.easeInOutBack,
+                              enlargeCenterPage: true,
+                            ),
+                            items: [
+                              1,
+                              2,
+                            ].map((i) {
+                              return Builder(
+                                builder: (BuildContext context) {
+                                  return Row(
+                                    children: [
+                                      Expanded(
+                                        child: GestureDetector(
+                                          child: Image.asset(
+                                            'assets/images/screenshots/flutter_bootcamp_project$i.png',
+                                          ),
+                                          onTap: () {
+                                            if (i == 1) {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const Dicee(),
+                                                ),
+                                              );
+                                            } else if (i == 2) {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const Xylophone(),
+                                                ),
+                                              );
+                                            }
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  );
                                 },
-                                child: const Text('GOOGLE PLAY'),
-                              ),
-                              TextButton(
-                                onPressed: () {
-                                  // Perform some action
-                                },
-                                child: const Text('APPLE APPSTORE'),
-                              ),
-                            ],
+                              );
+                            }).toList(),
+                          ),
+                          const SizedBox(
+                            height: 24.0,
                           ),
                         ],
                       ),
@@ -106,18 +139,18 @@ class PortfolioScreen extends StatelessWidget {
                           const ListTile(
                             leading: CircleAvatar(
                               backgroundImage: AssetImage(
-                                'assets/icons/plotsklappsIcon.png',
+                                'assets/icons/trdlToolIcon.png',
                               ),
                             ),
-                            title: Text('Example 2'),
+                            title: Text('TRDL-tool'),
                             subtitle: Text(
-                              'A second example will appear here',
+                              'Train dispatchers tool (NL)',
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              'Lorem ipsum...',
+                              'An application for train dispatchers in the Netherlands to quickly access their work instructions and background information. It includes a fast-paced quiz to test their knowledge and a chat functionality to contact each other',
                             ),
                           ),
                           ButtonBar(
@@ -125,7 +158,7 @@ class PortfolioScreen extends StatelessWidget {
                             children: [
                               TextButton(
                                 onPressed: () {
-                                  // Perform some action
+                                  launchTrdlTool();
                                 },
                                 child: const Text('GOOGLE PLAY'),
                               ),
@@ -217,38 +250,31 @@ class PortfolioScreen extends StatelessWidget {
                                 'assets/icons/plotsklappsIcon.png',
                               ),
                             ),
-                            title: Text('Flutter Bootcamp Projects'),
+                            title: Text('Example 4'),
                             subtitle: Text(
-                              'Learning path apps',
+                              'A fourth example will appear here',
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              'Everyone has got to start somewhere... right? Please have a look at my beginner projects which I\'ve styled to my liking. They should give you an impression of what I\'m capable of now!',
+                              'Lorem ipsum...',
                             ),
                           ),
                           ButtonBar(
                             alignment: MainAxisAlignment.start,
                             children: [
-                              const Text(
-                                'Portfolio Carousel will appear here...',
+                              TextButton(
+                                onPressed: () {
+                                  // Perform some action
+                                },
+                                child: const Text('GOOGLE PLAY'),
                               ),
-                              Align(
-                                alignment: Alignment.center,
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => Dicee(),
-                                      ),
-                                    );
-                                  },
-                                  child: const Text(
-                                    'Magic Button',
-                                  ),
-                                ),
+                              TextButton(
+                                onPressed: () {
+                                  // Perform some action
+                                },
+                                child: const Text('APPLE APPSTORE'),
                               ),
                             ],
                           ),
