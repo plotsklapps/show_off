@@ -209,6 +209,7 @@ class PortfolioScreen extends StatelessWidget {
                             items: [
                               1,
                               2,
+                              3,
                             ].map((i) {
                               return Builder(
                                 builder: (BuildContext context) {
@@ -234,6 +235,14 @@ class PortfolioScreen extends StatelessWidget {
                                                 MaterialPageRoute(
                                                   builder: (context) =>
                                                       const Xylophone(),
+                                                ),
+                                              );
+                                            } else if (i == 3) {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const BMIinput(),
                                                 ),
                                               );
                                             }

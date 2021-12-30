@@ -31,3 +31,6 @@ export 'package:showoff/homescreens/portfolio_screen.dart';
 export 'package:showoff/homescreens/contact_screen.dart';
 export 'package:showoff/bootcamp_pages/dicee.dart';
 export 'package:showoff/bootcamp_pages/xylophone.dart';
+export 'package:showoff/bootcamp_pages/bmi_calc/bmi_calc_main.dart';
+export 'package:showoff/bootcamp_pages/bmi_calc/bmi_calc_constants.dart';
+export 'package:showoff/bootcamp_pages/bmi_calc/bmi_calc_customwidgets.dart';
