@@ -1,8 +1,5 @@
 import 'package:showoff/all_imports.dart';
 
-String trdlToolURL =
-    'https://play.google.com/store/apps/details?id=nl.plotsklapps.trdl_tool';
-
 class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({Key? key}) : super(key: key);
 
@@ -13,7 +10,12 @@ class PortfolioScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.fromLTRB(
+                24.0,
+                24.0,
+                24.0,
+                12.0,
+              ),
               child: Row(
                 children: const [
                   Icon(FontAwesomeIcons.googlePlay),
@@ -47,6 +49,134 @@ class PortfolioScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Card(
+                      elevation: 6.0,
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: CircleAvatar(
+                              backgroundImage: const AssetImage(
+                                'assets/icons/trdlToolIcon.png',
+                              ),
+                              backgroundColor: kBackGroundGrey,
+                            ),
+                            title: const Text('TRDL-tool'),
+                            subtitle: const Text(
+                              'Train dispatchers tool (NL)',
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text(
+                              'An application for train dispatchers in the Netherlands to quickly access their work instructions and background information. It includes a fast-paced quiz to test their knowledge and a chat functionality to contact each other',
+                            ),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              GestureDetector(
+                                child: Image.asset(
+                                  'assets/icons/playstore_badge.png',
+                                  scale: 5.0,
+                                ),
+                                onTap: () {
+                                  launchTrdlTool();
+                                },
+                              ),
+                              GestureDetector(
+                                child: Image.asset(
+                                  'assets/icons/appstore_badge.png',
+                                  scale: 8.0,
+                                ),
+                                onTap: () {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(noAppleSorry);
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                18.0,
+                0.0,
+                18.0,
+                0.0,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Card(
+                      elevation: 6.0,
+                      child: Column(
+                        children: [
+                          const ListTile(
+                            leading: CircleAvatar(
+                              backgroundImage: AssetImage(
+                                'assets/icons/plotsklappsIcon.png',
+                              ),
+                            ),
+                            title: Text(
+                              'ShowOff',
+                            ),
+                            subtitle: Text(
+                              'Personal Portfolio',
+                            ),
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.all(16.0),
+                            child: Text(
+                              'What you see before you! It\'s my curriculum vitae in mobile development, the app in which I try out new and exciting Flutter tools and work on my skills for animations, user interface/experience and back-end.',
+                            ),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              GestureDetector(
+                                child: Image.asset(
+                                  'assets/icons/playstore_badge.png',
+                                  scale: 5.0,
+                                ),
+                                onTap: () {
+                                  launchShowOff();
+                                },
+                              ),
+                              GestureDetector(
+                                child: Image.asset(
+                                  'assets/icons/appstore_badge.png',
+                                  scale: 8.0,
+                                ),
+                                onTap: () {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(noAppleSorry);
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                18.0,
+                0.0,
+                18.0,
+                0.0,
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Card(
+                      elevation: 6.0,
                       child: Column(
                         children: [
                           const ListTile(
@@ -57,19 +187,22 @@ class PortfolioScreen extends StatelessWidget {
                             ),
                             title: Text('Flutter Bootcamp Projects'),
                             subtitle: Text(
-                              'Learning path \'apps\'',
+                              'Learningpath \'apps\'',
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              'Everyone has got to start somewhere... right? Please have a look at my beginner projects which I\'ve styled to my liking. They should give you an impression of what I\'m capable of now!',
+                              'Everyone has got to start somewhere... right? Please have a look at my beginner projects which I\'ve styled to my liking. They should give you an impression of what I\'ve learned through my courses and bootcamps!',
                             ),
                           ),
                           CarouselSlider(
                             options: CarouselOptions(
-                              height: 200.0,
+                              aspectRatio: 16 / 16,
                               autoPlay: true,
+                              autoPlayInterval: const Duration(
+                                seconds: 2,
+                              ),
                               autoPlayCurve: Curves.easeInOutBack,
                               enlargeCenterPage: true,
                             ),
@@ -134,114 +267,7 @@ class PortfolioScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Card(
-                      child: Column(
-                        children: [
-                          const ListTile(
-                            leading: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                'assets/icons/trdlToolIcon.png',
-                              ),
-                            ),
-                            title: Text('TRDL-tool'),
-                            subtitle: Text(
-                              'Train dispatchers tool (NL)',
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(16.0),
-                            child: Text(
-                              'An application for train dispatchers in the Netherlands to quickly access their work instructions and background information. It includes a fast-paced quiz to test their knowledge and a chat functionality to contact each other',
-                            ),
-                          ),
-                          ButtonBar(
-                            alignment: MainAxisAlignment.start,
-                            children: [
-                              TextButton(
-                                onPressed: () {
-                                  launchTrdlTool();
-                                },
-                                child: const Text('GOOGLE PLAY'),
-                              ),
-                              TextButton(
-                                onPressed: () {
-                                  // Perform some action
-                                },
-                                child: const Text('APPLE APPSTORE'),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(
-                18.0,
-                0.0,
-                18.0,
-                0.0,
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Card(
-                      child: Column(
-                        children: [
-                          const ListTile(
-                            leading: CircleAvatar(
-                              backgroundImage: AssetImage(
-                                'assets/icons/plotsklappsIcon.png',
-                              ),
-                            ),
-                            title: Text('Example 3'),
-                            subtitle: Text(
-                              'A third example will appear here',
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.all(16.0),
-                            child: Text(
-                              'Lorem ipsum...',
-                            ),
-                          ),
-                          ButtonBar(
-                            alignment: MainAxisAlignment.start,
-                            children: [
-                              TextButton(
-                                onPressed: () {
-                                  // Perform some action
-                                },
-                                child: const Text('GOOGLE PLAY'),
-                              ),
-                              TextButton(
-                                onPressed: () {
-                                  // Perform some action
-                                },
-                                child: const Text('APPLE APPSTORE'),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(
-                18.0,
-                0.0,
-                18.0,
-                0.0,
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Card(
+                      elevation: 6.0,
                       child: Column(
                         children: [
                           const ListTile(
@@ -285,6 +311,9 @@ class PortfolioScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 8.0,
+            ),
           ],
         ),
       ),
@@ -294,6 +323,12 @@ class PortfolioScreen extends StatelessWidget {
   void launchTrdlTool() async {
     if (!await launch(trdlToolURL)) {
       throw 'Could not launch $trdlToolURL';
+    }
+  }
+
+  void launchShowOff() async {
+    if (!await launch(showOffURL)) {
+      throw 'Could not launch $showOffURL';
     }
   }
 }

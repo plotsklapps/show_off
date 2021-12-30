@@ -1,20 +1,13 @@
 import 'package:showoff/all_imports.dart';
 
-Color kColorDarkGreen = const Color(0xFF004E15);
-Color kColorMediumGreen = const Color(0xFF669573);
-Color kColorLightGreen = const Color(0xFFEDF2EE);
-Color kColorErrorRed = const Color(0xFF790000);
-
+/*APP COLOR CONSTANTS*/
 Color kOrangeFlame = const Color(0xFFD35A27);
 Color kGreyGunmetal = const Color(0xff172734);
 Color kGreyCharcoal = const Color(0xff32434f);
 Color kGreyElectricBlue = const Color(0xff526e7f);
+Color kBackGroundGrey = const Color(0xffdedede);
 
-const kDarkGreen = 0xFF004E14;
-const kLightGreen = 0xFF738E7E;
-const kSecondaryGreen = 0xFF2F3E32;
-
-/*CHATSCREEN CONSTANTS*/
+/*CONTACTSCREEN CONSTANTS*/
 late String hintText;
 
 const kSendButtonTextStyle = TextStyle(
@@ -39,5 +32,18 @@ const kTextFieldDecoration = InputDecoration(
   focusedBorder: OutlineInputBorder(
     borderSide: BorderSide(width: 2.0),
     borderRadius: BorderRadius.all(Radius.circular(32.0)),
+  ),
+);
+
+/*URL LAUNCHER CONSTANTS*/
+String trdlToolURL =
+    'https://play.google.com/store/apps/details?id=nl.plotsklapps.trdl_tool';
+String showOffURL =
+    'https://play.google.com/store/apps/details?id=nl.plotsklapps.showoff';
+
+/*SNACKBAR CONSTANTS*/
+const noAppleSorry = SnackBar(
+  content: Text(
+    'I\'m poor. I cannot afford a MacBook yet to develop for Apple, but stay tuned!',
   ),
 );

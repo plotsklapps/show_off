@@ -179,6 +179,14 @@ showDartFlutterCourseDialog(BuildContext context) {
               'assets/images/certificates/DartBeginners.jpg',
             ),
           ),
+          SizedBox(
+            height: 8.0,
+          ),
+          Image(
+            image: AssetImage(
+              'assets/images/certificates/FlutterBeginners.jpg',
+            ),
+          ),
         ],
       ),
     ),
