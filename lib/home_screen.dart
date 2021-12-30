@@ -58,15 +58,13 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             8.0,
           ),
           child: GestureDetector(
-            child: const Hero(
-              tag: 'plotsklappsicon',
-              child: CircleAvatar(
-                backgroundImage: AssetImage(
-                  'assets/icons/plotsklappsIcon.png',
-                ),
+            child: const CircleAvatar(
+              backgroundImage: AssetImage(
+                'assets/icons/plotsklappsIcon.png',
               ),
             ),
             onTap: () {
+              /*CUSTOM_WIDGETS/ALERT_DIALOGS.DART*/
               showAvatarMenu(context);
             },
           ),

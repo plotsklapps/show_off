@@ -88,6 +88,7 @@ class PortfolioScreen extends StatelessWidget {
                                   scale: 8.0,
                                 ),
                                 onTap: () {
+                                  /*ALL_CONSTANTS.DART*/
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(noAppleSorry);
                                 },
@@ -152,6 +153,7 @@ class PortfolioScreen extends StatelessWidget {
                                   scale: 8.0,
                                 ),
                                 onTap: () {
+                                  /*ALL_CONSTANTS.DART*/
                                   ScaffoldMessenger.of(context)
                                       .showSnackBar(noAppleSorry);
                                 },
@@ -196,6 +198,7 @@ class PortfolioScreen extends StatelessWidget {
                               'Everyone has got to start somewhere... right? Please have a look at my beginner projects which I\'ve styled to my liking. They should give you an impression of what I\'ve learned through my courses and bootcamps!',
                             ),
                           ),
+                          /*CAROUSELSLIDER*/
                           CarouselSlider(
                             options: CarouselOptions(
                               aspectRatio: 16 / 16,
@@ -206,6 +209,7 @@ class PortfolioScreen extends StatelessWidget {
                               autoPlayCurve: Curves.easeInOutBack,
                               enlargeCenterPage: true,
                             ),
+                            /*ADD ITEM TO INCREASE LIST AND THEN ADD SCREENSHOTIMAGE TO ASSETS*/
                             items: [
                               1,
                               2,
@@ -221,6 +225,7 @@ class PortfolioScreen extends StatelessWidget {
                                             'assets/images/screenshots/flutter_bootcamp_project$i.png',
                                           ),
                                           onTap: () {
+                                            /*MAKE THE CAROUSEL GO TO APP WHEN PRESSED ON CORRESPONDING IMAGE*/
                                             if (i == 1) {
                                               Navigator.push(
                                                 context,
@@ -297,19 +302,29 @@ class PortfolioScreen extends StatelessWidget {
                             ),
                           ),
                           ButtonBar(
-                            alignment: MainAxisAlignment.start,
+                            alignment: MainAxisAlignment.spaceAround,
                             children: [
-                              TextButton(
-                                onPressed: () {
-                                  // Perform some action
+                              GestureDetector(
+                                child: Image.asset(
+                                  'assets/icons/playstore_badge.png',
+                                  scale: 5.0,
+                                ),
+                                onTap: () {
+                                  /*ALL_CONSTANTS.DART*/
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(noAppYet);
                                 },
-                                child: const Text('GOOGLE PLAY'),
                               ),
-                              TextButton(
-                                onPressed: () {
-                                  // Perform some action
+                              GestureDetector(
+                                child: Image.asset(
+                                  'assets/icons/appstore_badge.png',
+                                  scale: 8.0,
+                                ),
+                                onTap: () {
+                                  /*ALL_CONSTANTS.DART*/
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(noAppleSorry);
                                 },
-                                child: const Text('APPLE APPSTORE'),
                               ),
                             ],
                           ),

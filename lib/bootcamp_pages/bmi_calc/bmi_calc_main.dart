@@ -25,11 +25,11 @@ class CalculatorBrain {
 
   String getInterpretation() {
     if (_bmi >= 25) {
-      return 'You have a higher than normal body weight. Try to exercise more.';
+      return 'You have a higher than normal body weight. Are you THAT muscular?.';
     } else if (_bmi >= 18.5) {
-      return 'You have a normal body weight. Good job!';
+      return 'You have a normal body weight. You must look really good!';
     } else {
-      return 'You have a lower than normal body weight. You can eat a bit more.';
+      return 'You have a lower than normal body weight. Try to eat more and more often :)';
     }
   }
 }
@@ -54,253 +54,259 @@ class _BMIinputState extends State<BMIinput> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: ReusableCard(
-                    onPress: () {
-                      setState(() {
-                        selectedGender = Gender.male;
-                      });
-                    },
-                    colour: selectedGender == Gender.male
-                        ? kActiveCardColour
-                        : kInactiveCardColour,
-                    cardChild: const IconContent(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'MALE',
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: ReusableCard(
-                    onPress: () {
-                      setState(() {
-                        selectedGender = Gender.female;
-                      });
-                    },
-                    colour: selectedGender == Gender.female
-                        ? kActiveCardColour
-                        : kInactiveCardColour,
-                    cardChild: const IconContent(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: ReusableCard(
-              colour: kActiveCardColour,
-              cardChild: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: Row(
                 children: <Widget>[
-                  Text(
-                    'HEIGHT',
-                    style: kLabelTextStyle,
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    textBaseline: TextBaseline.alphabetic,
-                    children: <Widget>[
-                      Text(
-                        height.toString(),
-                        style: kNumberTextStyle,
-                      ),
-                      Text(
-                        'cm',
-                        style: kLabelTextStyle,
-                      ),
-                    ],
-                  ),
-                  SliderTheme(
-                    data: SliderTheme.of(context).copyWith(
-                      inactiveTrackColor: kGreyCharcoal,
-                      activeTrackColor: kBackGroundGrey,
-                      thumbColor: kGreyGunmetal,
-                      overlayColor: kBackGroundGrey,
-                      thumbShape:
-                          const RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                      overlayShape:
-                          const RoundSliderOverlayShape(overlayRadius: 30.0),
-                    ),
-                    child: Slider(
-                      value: height.toDouble(),
-                      min: 120.0,
-                      max: 220.0,
-                      onChanged: (double newValue) {
+                  Expanded(
+                    child: ReusableCard(
+                      onPress: () {
                         setState(() {
-                          height = newValue.round();
+                          selectedGender = Gender.male;
                         });
                       },
+                      colour: selectedGender == Gender.male
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                        colour: selectedGender == Gender.male
+                            ? kOrangeFlame
+                            : kBackGroundGrey,
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ReusableCard(
+                      onPress: () {
+                        setState(() {
+                          selectedGender = Gender.female;
+                        });
+                      },
+                      colour: selectedGender == Gender.female
+                          ? kActiveCardColour
+                          : kInactiveCardColour,
+                      cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                        colour: selectedGender == Gender.female
+                            ? kOrangeFlame
+                            : kBackGroundGrey,
+                      ),
                     ),
                   ),
                 ],
               ),
-              onPress: () {},
             ),
-          ),
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: ReusableCard(
-                    colour: kActiveCardColour,
-                    cardChild: Column(
+            Expanded(
+              child: ReusableCard(
+                colour: kActiveCardColour,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'HEIGHT',
+                      style: kLabelTextStyle,
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
                       children: <Widget>[
                         Text(
-                          'WEIGHT',
+                          height.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Text(
+                          'cm',
                           style: kLabelTextStyle,
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.baseline,
-                          textBaseline: TextBaseline.alphabetic,
-                          children: [
-                            Text(
-                              weight.toString(),
-                              style: kNumberTextStyle,
-                            ),
-                            Text(
-                              'kg',
-                              style: kLabelTextStyle,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.minus,
-                              onPressed: () {
-                                setState(() {
-                                  weight--;
-                                });
-                              },
-                            ),
-                            const SizedBox(
-                              width: 10.0,
-                            ),
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.plus,
-                              onPressed: () {
-                                setState(() {
-                                  weight++;
-                                });
-                              },
-                            ),
-                          ],
                         ),
                       ],
                     ),
-                    onPress: () {},
-                  ),
-                ),
-                Expanded(
-                  child: ReusableCard(
-                    colour: kActiveCardColour,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'AGE',
-                          style: kLabelTextStyle,
+                    SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                        inactiveTrackColor: kGreyCharcoal,
+                        activeTrackColor: kBackGroundGrey,
+                        thumbColor: kOrangeFlame,
+                        overlayColor: kBackGroundGrey,
+                        thumbShape: const RoundSliderThumbShape(
+                          enabledThumbRadius: 15.0,
                         ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.baseline,
-                          textBaseline: TextBaseline.alphabetic,
-                          children: [
-                            Text(
-                              age.toString(),
-                              style: kNumberTextStyle,
-                            ),
-                            Text(
-                              'yr',
-                              style: kLabelTextStyle,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 8.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.minus,
-                              onPressed: () {
-                                setState(
-                                  () {
-                                    age--;
-                                  },
-                                );
-                              },
-                            ),
-                            const SizedBox(
-                              width: 10.0,
-                            ),
-                            RoundIconButton(
-                              icon: FontAwesomeIcons.plus,
-                              onPressed: () {
-                                setState(() {
-                                  age++;
-                                });
-                              },
-                            )
-                          ],
-                        )
-                      ],
+                        overlayShape:
+                            const RoundSliderOverlayShape(overlayRadius: 30.0),
+                      ),
+                      child: Slider(
+                        value: height.toDouble(),
+                        min: 120.0,
+                        max: 220.0,
+                        onChanged: (double newValue) {
+                          setState(() {
+                            height = newValue.round();
+                          });
+                        },
+                      ),
                     ),
-                    onPress: () {},
-                  ),
+                  ],
                 ),
-              ],
+                onPress: () {},
+              ),
             ),
-          ),
-          BottomButton(
-            buttonTitle: 'CALCULATE',
-            onTap: () {
-              CalculatorBrain calc =
-                  CalculatorBrain(height: height, weight: weight);
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: ReusableCard(
+                      colour: kActiveCardColour,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            'WEIGHT',
+                            style: kLabelTextStyle,
+                          ),
+                          const SizedBox(
+                            height: 8.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
+                            textBaseline: TextBaseline.alphabetic,
+                            children: [
+                              Text(
+                                weight.toString(),
+                                style: kNumberTextStyle,
+                              ),
+                              Text(
+                                'kg',
+                                style: kLabelTextStyle,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 8.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              RoundIconButton(
+                                icon: FontAwesomeIcons.minus,
+                                onPressed: () {
+                                  setState(() {
+                                    weight--;
+                                  });
+                                },
+                              ),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              RoundIconButton(
+                                icon: FontAwesomeIcons.plus,
+                                onPressed: () {
+                                  setState(() {
+                                    weight++;
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      onPress: () {},
+                    ),
+                  ),
+                  Expanded(
+                    child: ReusableCard(
+                      colour: kActiveCardColour,
+                      cardChild: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            'AGE',
+                            style: kLabelTextStyle,
+                          ),
+                          const SizedBox(
+                            height: 8.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
+                            textBaseline: TextBaseline.alphabetic,
+                            children: [
+                              Text(
+                                age.toString(),
+                                style: kNumberTextStyle,
+                              ),
+                              Text(
+                                'yr',
+                                style: kLabelTextStyle,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 8.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              RoundIconButton(
+                                icon: FontAwesomeIcons.minus,
+                                onPressed: () {
+                                  setState(
+                                    () {
+                                      age--;
+                                    },
+                                  );
+                                },
+                              ),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              RoundIconButton(
+                                icon: FontAwesomeIcons.plus,
+                                onPressed: () {
+                                  setState(() {
+                                    age++;
+                                  });
+                                },
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                      onPress: () {},
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            BottomButton(
+              buttonTitle: 'CALCULATE',
+              onTap: () {
+                CalculatorBrain calc =
+                    CalculatorBrain(height: height, weight: weight);
 
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => BMIoutput(
-                    bmiResult: calc.calculateBMI(),
-                    resultText: calc.getResult(),
-                    interpretation: calc.getInterpretation(),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BMIoutput(
+                      bmiResult: calc.calculateBMI(),
+                      resultText: calc.getResult(),
+                      interpretation: calc.getInterpretation(),
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-        ],
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -320,63 +326,62 @@ class BMIoutput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BMI CALCULATOR'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(15.0),
-              alignment: Alignment.bottomLeft,
-              child: const Text(
-                'Your Result',
-                style: kTitleTextStyle,
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                padding: const EdgeInsets.all(15.0),
+                alignment: Alignment.bottomLeft,
+                child: const Text(
+                  'Your Result',
+                  style: kTitleTextStyle,
+                ),
               ),
             ),
-          ),
-          Expanded(
-            flex: 5,
-            child: ReusableCard(
-              colour: kActiveCardColour,
-              cardChild: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    resultText.toUpperCase(),
-                    style: kResultTextStyle,
-                  ),
-                  Text(
-                    bmiResult,
-                    style: kBMITextStyle,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 24.0,
-                      right: 24.0,
+            Expanded(
+              flex: 5,
+              child: ReusableCard(
+                colour: kActiveCardColour,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      resultText.toUpperCase(),
+                      style: kResultTextStyle,
                     ),
-                    child: Text(
-                      interpretation,
-                      textAlign: TextAlign.center,
-                      style: kBodyTextStyle,
+                    Text(
+                      bmiResult,
+                      style: kBMITextStyle,
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 24.0,
+                        right: 24.0,
+                      ),
+                      child: Text(
+                        interpretation,
+                        textAlign: TextAlign.center,
+                        style: kBodyTextStyle,
+                      ),
+                    ),
+                  ],
+                ),
+                onPress: () {},
               ),
-              onPress: () {},
             ),
-          ),
-          BottomButton(
-            buttonTitle: 'RE-CALCULATE',
-            onTap: () {
-              Navigator.pop(context);
-            },
-          )
-        ],
+            BottomButton(
+              buttonTitle: 'RE-CALCULATE',
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
+        ),
       ),
     );
   }

@@ -1,7 +1,7 @@
 name: showoff
 description: :plotsklapps showing off
 
-version: 0.0.4+4
+version: 0.0.5+5
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -34,7 +34,6 @@ flutter:
 
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/
     - assets/sounds/
@@ -48,25 +47,21 @@ flutter_icons:
   image_path: "assets/icons/plotsklappsIcon.png"
 
 flutter_native_splash:
-
   # This package generates native code to customize Flutter's default white native splash screen
   # with background color and splash image.
   # Customize the parameters below, and run the following command in the terminal:
   # flutter pub run flutter_native_splash:create
   # To restore Flutter's default white splash screen, run the following command in the terminal:
   # flutter pub run flutter_native_splash:remove
-
   color: "#dedede"
   image: assets/icons/plotsklappsLogoStacked.png
   color_dark: "#dedede"
   image_dark: assets/icons/plotsklappsLogoStacked.png
-
   # The android, ios and web parameters can be used to disable generating a splash screen on a given
   # platform.
   #android: false
   #ios: false
   #web: false
-
   android_gravity: center
   ios_content_mode: center
   web_image_mode: center

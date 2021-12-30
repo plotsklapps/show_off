@@ -57,10 +57,12 @@ class RoundIconButton extends StatelessWidget {
 class IconContent extends StatelessWidget {
   final IconData icon;
   final String label;
+  final Color colour;
 
   const IconContent({
     required this.icon,
     required this.label,
+    required this.colour,
     Key? key,
   }) : super(key: key);
 
@@ -72,7 +74,7 @@ class IconContent extends StatelessWidget {
         Icon(
           icon,
           size: 90.0,
-          color: kBackGroundGrey,
+          color: colour,
         ),
         const SizedBox(
           height: 15.0,
@@ -107,7 +109,7 @@ class BottomButton extends StatelessWidget {
             style: kLargeButtonTextStyle,
           ),
         ),
-        color: kBottomContainerColour,
+        color: kOrangeFlame,
         margin: const EdgeInsets.only(top: 10.0),
         padding: const EdgeInsets.only(bottom: 8.0),
         width: double.infinity,

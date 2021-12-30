@@ -4,7 +4,6 @@ const kBottomContainerHeight = 80.0;
 
 Color kActiveCardColour = kGreyElectricBlue;
 Color kInactiveCardColour = kGreyGunmetal;
-Color kBottomContainerColour = kBackGroundGrey;
 
 TextStyle kLabelTextStyle = TextStyle(
   fontSize: 18.0,
@@ -29,7 +28,7 @@ const kTitleTextStyle = TextStyle(
 );
 
 TextStyle kResultTextStyle = TextStyle(
-  color: kBackGroundGrey,
+  color: kOrangeFlame,
   fontSize: 48.0,
   fontWeight: FontWeight.bold,
 );
@@ -39,6 +38,7 @@ const kBMITextStyle = TextStyle(
   fontWeight: FontWeight.bold,
 );
 
-const kBodyTextStyle = TextStyle(
+TextStyle kBodyTextStyle = TextStyle(
   fontSize: 22.0,
+  color: kBackGroundGrey,
 );

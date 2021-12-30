@@ -1,10 +1,5 @@
 import 'package:showoff/all_imports.dart';
 
-String websiteURL = 'https://plotsklapps.github.io/';
-String githubURL = 'https://github.com/plotsklapps';
-String hashnodeURL = 'https://plotsklapps.hashnode.dev/';
-String twitterURL = 'https://twitter.com/plotsklapps';
-
 class BusinessCardScreen extends StatelessWidget {
   const BusinessCardScreen({Key? key}) : super(key: key);
 

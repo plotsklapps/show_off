@@ -36,6 +36,10 @@ const kTextFieldDecoration = InputDecoration(
 );
 
 /*URL LAUNCHER CONSTANTS*/
+String websiteURL = 'https://plotsklapps.github.io/';
+String githubURL = 'https://github.com/plotsklapps';
+String hashnodeURL = 'https://plotsklapps.hashnode.dev/';
+String twitterURL = 'https://twitter.com/plotsklapps';
 String trdlToolURL =
     'https://play.google.com/store/apps/details?id=nl.plotsklapps.trdl_tool';
 String showOffURL =
@@ -45,5 +49,11 @@ String showOffURL =
 const noAppleSorry = SnackBar(
   content: Text(
     'I\'m poor. I cannot afford a MacBook yet to develop for Apple, but stay tuned!',
+  ),
+);
+
+const noAppYet = SnackBar(
+  content: Text(
+    'This badge will redirect you to the app as soon as it\'s online!',
   ),
 );

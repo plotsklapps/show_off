@@ -17,7 +17,7 @@ class _ContactScreenState extends State<ContactScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const Text(
-              'Do you want to know more about the endless possibilities with Flutter & Dart? \n\nDon\'t hesitate to press the button below to contact me!',
+              'Do you want to know more about the endless possibilities with Flutter & Dart? \n\nDon\'t hesitate to press the button below to email me!',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24.0,
@@ -28,11 +28,12 @@ class _ContactScreenState extends State<ContactScreen> {
               children: [
                 SpinKitDoubleBounce(
                   color: kOrangeFlame,
-                  size: 50.0,
+                  size: 150.0,
                 ),
                 GestureDetector(
                   child: const Icon(
                     FontAwesomeIcons.rocketchat,
+                    size: 48.0,
                   ),
                   onTap: () {
                     Navigator.pushNamed(

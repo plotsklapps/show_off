@@ -12,6 +12,7 @@ class EducationScreen extends StatelessWidget {
         top: 18.0,
         bottom: 0.0,
       ),
+      /*MAKES THE COLOR COMPLETELY TRANSPARENT*/
       color: const Color(0x00000000),
       child: FlipCard(
         direction: FlipDirection.HORIZONTAL,
@@ -84,6 +85,7 @@ class EducationScreen extends StatelessWidget {
                       ),
                       title: const Text('Show Diploma & Grade List'),
                       onTap: () {
+                        /*CUSTOM_WIDGETS/ALERT_DIALOGS.DART*/
                         showIonicAngularDialog(context);
                       },
                     ),
@@ -106,6 +108,7 @@ class EducationScreen extends StatelessWidget {
         top: 18.0,
         bottom: 0.0,
       ),
+      /*MAKES THE COLOR COMPLETELY TRANSPARENT*/
       color: const Color(0x00000000),
       child: FlipCard(
         direction: FlipDirection.HORIZONTAL,
@@ -179,6 +182,7 @@ class EducationScreen extends StatelessWidget {
                       title: Text('Show Certificate'),
                     ),
                     onTap: () {
+                      /*CUSTOM_WIDGETS/ALERT_DIALOGS.DART*/
                       showFlutterBootcampDialog(context);
                     },
                   ),
@@ -200,6 +204,7 @@ class EducationScreen extends StatelessWidget {
         top: 18.0,
         bottom: 0.0,
       ),
+      /*MAKES THE COLOR COMPLETELY TRANSPARENT*/
       color: const Color(0x00000000),
       child: FlipCard(
         direction: FlipDirection.HORIZONTAL,
@@ -272,6 +277,7 @@ class EducationScreen extends StatelessWidget {
                       ),
                       title: const Text('Show Certificate'),
                       onTap: () {
+                        /*CUSTOM_WIDGETS/ALERT_DIALOGS.DART*/
                         showDartNoviceExpertDialog(context);
                       },
                     ),
@@ -294,6 +300,7 @@ class EducationScreen extends StatelessWidget {
         top: 18.0,
         bottom: 0.0,
       ),
+      /*MAKES THE COLOR COMPLETELY TRANSPARENT*/
       color: const Color(0x00000000),
       child: FlipCard(
         direction: FlipDirection.HORIZONTAL,
@@ -366,6 +373,7 @@ class EducationScreen extends StatelessWidget {
                       ),
                       title: const Text('Show Certificates'),
                       onTap: () {
+                        /*CUSTOM_WIDGETS/ALERT_DIALOGS.DART*/
                         showDartFlutterCourseDialog(context);
                       },
                     ),
@@ -379,6 +387,7 @@ class EducationScreen extends StatelessWidget {
     );
   }
 
+  /*EDUCATIONSCREEN RENDERS THE CONTENTS SEPARATELY*/
   @override
   Widget build(BuildContext context) {
     return Scaffold(

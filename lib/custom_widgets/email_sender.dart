@@ -17,17 +17,17 @@ class _EmailSenderState extends State<EmailSender> {
   final _bodyController = TextEditingController();
 
   Future<void> send() async {
+    String platformResponse;
+
     final Email email = Email(
       body: _bodyController.text,
       subject: _subjectController.text,
       recipients: [_recipientController.text],
     );
 
-    String platformResponse;
-
     try {
       await FlutterEmailSender.send(email);
-      platformResponse = 'success';
+      platformResponse = 'Thank you for reaching out to me!';
     } catch (error) {
       platformResponse = error.toString();
     }
@@ -65,6 +65,7 @@ class _EmailSenderState extends State<EmailSender> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
+                keyboardType: TextInputType.emailAddress,
                 controller: _recipientController,
                 decoration: const InputDecoration(
                   labelText: 'Recipient',
@@ -75,6 +76,7 @@ class _EmailSenderState extends State<EmailSender> {
               padding: const EdgeInsets.all(8.0),
               child: TextField(
                 controller: _subjectController,
+                textCapitalization: TextCapitalization.values[0],
                 decoration: const InputDecoration(
                   labelText: 'Subject',
                 ),
@@ -85,6 +87,7 @@ class _EmailSenderState extends State<EmailSender> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: _bodyController,
+                  textCapitalization: TextCapitalization.values[0],
                   maxLines: null,
                   expands: true,
                   textAlignVertical: TextAlignVertical.top,
