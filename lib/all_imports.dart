@@ -18,9 +18,14 @@ export 'package:audioplayers/audioplayers.dart';
 
 /*CONSTANTS & CUSTOMS*/
 export 'package:showoff/all_constants.dart';
-export 'package:showoff/custom_widgets/alert_dialogs.dart';
+export 'package:showoff/custom_widgets/alert_dialogs/show_avatar_dialog.dart';
+export 'package:showoff/custom_widgets/alert_dialogs/show_ionicangular_dialog.dart';
+export 'package:showoff/custom_widgets/alert_dialogs/show_flutterbootcamp_dialog.dart';
+export 'package:showoff/custom_widgets/alert_dialogs/show_dartnoviceexpert_dialog.dart';
+export 'package:showoff/custom_widgets/alert_dialogs/show_dartfluttercourse_dialog.dart';
 export 'package:showoff/custom_widgets/typewriter_text.dart';
 export 'package:showoff/custom_widgets/email_sender.dart';
+export 'package:showoff/theme/flexcolorscheme.dart';
 
 /*ROUTES AND PAGES*/
 export 'package:showoff/home_screen.dart';

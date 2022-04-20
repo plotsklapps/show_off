@@ -8,21 +8,19 @@ class EmailSender extends StatefulWidget {
 }
 
 class _EmailSenderState extends State<EmailSender> {
-  final _recipientController = TextEditingController(
-    text: 'plotsklapps@gmail.com',
-  );
-
-  final _subjectController = TextEditingController();
-
-  final _bodyController = TextEditingController();
+  late final TextEditingController _subjectCtrl;
+  late final TextEditingController _recipientCtrl;
+  late final TextEditingController _bodyCtrl;
 
   Future<void> send() async {
     String platformResponse;
 
     final Email email = Email(
-      body: _bodyController.text,
-      subject: _subjectController.text,
-      recipients: [_recipientController.text],
+      body: _bodyCtrl.text,
+      subject: _subjectCtrl.text,
+      recipients: [
+        _recipientCtrl.text
+      ],
     );
 
     try {
@@ -41,6 +39,22 @@ class _EmailSenderState extends State<EmailSender> {
         content: Text(platformResponse),
       ),
     );
+  }
+
+  @override
+  void initState() {
+    _subjectCtrl = TextEditingController();
+    _recipientCtrl = TextEditingController(text: 'plotsklapps@gmail.com');
+    _bodyCtrl = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _subjectCtrl.dispose();
+    _recipientCtrl.dispose();
+    _bodyCtrl.dispose();
+    super.dispose();
   }
 
   @override
@@ -66,7 +80,7 @@ class _EmailSenderState extends State<EmailSender> {
               padding: const EdgeInsets.all(8.0),
               child: TextField(
                 keyboardType: TextInputType.emailAddress,
-                controller: _recipientController,
+                controller: _recipientCtrl,
                 decoration: const InputDecoration(
                   labelText: 'Recipient',
                 ),
@@ -75,7 +89,7 @@ class _EmailSenderState extends State<EmailSender> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                controller: _subjectController,
+                controller: _subjectCtrl,
                 textCapitalization: TextCapitalization.values[0],
                 decoration: const InputDecoration(
                   labelText: 'Subject',
@@ -86,7 +100,7 @@ class _EmailSenderState extends State<EmailSender> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
-                  controller: _bodyController,
+                  controller: _bodyCtrl,
                   textCapitalization: TextCapitalization.values[0],
                   maxLines: null,
                   expands: true,
