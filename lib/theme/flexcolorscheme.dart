@@ -1,38 +1,36 @@
 import 'package:showoff/all_imports.dart';
 
 ThemeData themeLight = FlexThemeData.light(
-  colors: const FlexSchemeColor(
-    primary: Color(0xff172734),
-    primaryVariant: Color(0xff526e7f),
-    secondary: Color(0xffd35a37),
-    secondaryVariant: Color(0xff32434f),
-    appBarColor: Color(0xff32434f),
-    error: Color(0xffb00020),
-  ),
+  scheme: FlexScheme.outerSpace,
   surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
-  blendLevel: 35,
+  blendLevel: 20,
   appBarStyle: FlexAppBarStyle.primary,
-  appBarOpacity: 0.85,
-  appBarElevation: 6,
-  transparentStatusBar: true,
-  tabBarStyle: FlexTabBarStyle.forAppBar,
-  tooltipsMatchBackground: true,
-  swapColors: false,
-  lightIsWhite: false,
-  useSubThemes: true,
-  visualDensity: FlexColorScheme.comfortablePlatformDensity,
-  fontFamily: GoogleFonts.questrial().fontFamily,
+  appBarOpacity: 0.95,
   subThemesData: const FlexSubThemesData(
-    useTextTheme: true,
-    fabUseShape: true,
-    interactionEffects: true,
-    bottomNavigationBarOpacity: 0.85,
-    bottomNavigationBarElevation: 6,
-    inputDecoratorIsFilled: true,
-    inputDecoratorBorderType: FlexInputBorderType.outline,
-    inputDecoratorUnfocusedHasBorder: true,
-    blendOnColors: true,
-    blendTextTheme: true,
-    popupMenuOpacity: 0.95,
+    blendOnLevel: 20,
+    blendOnColors: false,
+    defaultRadius: 24.0,
   ),
+  useMaterial3ErrorColors: true,
+  visualDensity: FlexColorScheme.comfortablePlatformDensity,
+// To use the playground font, add GoogleFonts package and uncomment
+  fontFamily: GoogleFonts.questrial().fontFamily,
 );
+
+ThemeData themeDark = FlexThemeData.dark(
+  scheme: FlexScheme.outerSpace,
+  surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
+  blendLevel: 15,
+  appBarOpacity: 0.90,
+  subThemesData: const FlexSubThemesData(
+    blendOnLevel: 30,
+    defaultRadius: 24.0,
+  ),
+  useMaterial3ErrorColors: true,
+  visualDensity: FlexColorScheme.comfortablePlatformDensity,
+// To use the playground font, add GoogleFonts package and uncomment
+  fontFamily: GoogleFonts.questrial().fontFamily,
+);
+// If you do not have a themeMode switch, uncomment this line
+// to let the device system mode control the theme mode:
+// themeMode: ThemeMode.system,

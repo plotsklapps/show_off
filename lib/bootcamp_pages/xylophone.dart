@@ -4,8 +4,10 @@ class Xylophone extends StatelessWidget {
   const Xylophone({Key? key}) : super(key: key);
 
   void playSound(int soundNumber) {
-    final player = AudioCache();
-    player.play('sounds/xylophone_note$soundNumber.wav');
+    final player = AudioPlayer();
+    player.play(
+      AssetSource('sounds/xylophone_note$soundNumber.wav'),
+    );
   }
 
   Expanded buildKey({required Color color, required int soundNumber}) {
