@@ -81,7 +81,7 @@ class BusinessCardScreen extends StatelessWidget {
                   child: GestureDetector(
                     child: ListTile(
                       leading: Icon(
-                        FontAwesomeIcons.home,
+                        FontAwesomeIcons.house,
                         color: kOrangeFlame,
                       ),
                       title: const Text('Visit my website'),
@@ -109,7 +109,7 @@ class BusinessCardScreen extends StatelessWidget {
                   child: GestureDetector(
                     child: ListTile(
                       leading: Icon(
-                        FontAwesomeIcons.slackHash,
+                        FontAwesomeIcons.slack,
                         color: kOrangeFlame,
                       ),
                       title: const Text('Read my blog'),
@@ -172,25 +172,25 @@ class BusinessCardScreen extends StatelessWidget {
   }
 
   void launchWebsite() async {
-    if (!await launch(websiteURL)) {
+    if (!await launchUrl(websiteURL)) {
       throw 'Could not launch $websiteURL';
     }
   }
 
   void launchGithub() async {
-    if (!await launch(githubURL)) {
+    if (!await launchUrl(githubURL)) {
       throw 'Could not launch $githubURL';
     }
   }
 
   void launchHashnode() async {
-    if (!await launch(hashnodeURL)) {
+    if (!await launchUrl(hashnodeURL)) {
       throw 'Could not launch $hashnodeURL';
     }
   }
 
   void launchTwitter() async {
-    if (!await launch(twitterURL)) {
+    if (!await launchUrl(twitterURL)) {
       throw 'Could not launch $twitterURL';
     }
   }

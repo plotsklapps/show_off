@@ -290,15 +290,15 @@ class PortfolioScreen extends StatelessWidget {
                                 'assets/icons/plotsklappsIcon.png',
                               ),
                             ),
-                            title: Text('Example 4'),
+                            title: Text('Flutter CodeLabs'),
                             subtitle: Text(
-                              'A fourth example will appear here',
+                              'Online Codelabs',
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              'Lorem ipsum...',
+                              'Online codelabs by Google and RomanJustCodes are great resources to keep practising Flutter skills.\nI\'ve added them to this portfolio to show my consistency in expanding and maintaining my knowledge of Dart & Flutter!',
                             ),
                           ),
                           ButtonBar(
@@ -345,13 +345,13 @@ class PortfolioScreen extends StatelessWidget {
   }
 
   void launchTrdlTool() async {
-    if (!await launch(trdlToolURL)) {
+    if (!await launchUrl(trdlToolURL)) {
       throw 'Could not launch $trdlToolURL';
     }
   }
 
   void launchShowOff() async {
-    if (!await launch(showOffURL)) {
+    if (!await launchUrl(showOffURL)) {
       throw 'Could not launch $showOffURL';
     }
   }

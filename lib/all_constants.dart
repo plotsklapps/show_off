@@ -36,14 +36,24 @@ const kTextFieldDecoration = InputDecoration(
 );
 
 /*URL LAUNCHER CONSTANTS*/
-String websiteURL = 'https://plotsklapps.github.io/';
-String githubURL = 'https://github.com/plotsklapps';
-String hashnodeURL = 'https://plotsklapps.hashnode.dev/';
-String twitterURL = 'https://twitter.com/plotsklapps';
-String trdlToolURL =
-    'https://play.google.com/store/apps/details?id=nl.plotsklapps.trdl_tool';
-String showOffURL =
-    'https://play.google.com/store/apps/details?id=nl.plotsklapps.showoff';
+final Uri trdlToolURL = Uri.parse(
+  'https://play.google.com/store/apps/details?id=nl.plotsklapps.trdl_tool',
+);
+final Uri showOffURL = Uri.parse(
+  'https://play.google.com/store/apps/details?id=nl.plotsklapps.showoff',
+);
+final Uri websiteURL = Uri.parse(
+  'https://plotsklapps.github.io/',
+);
+final Uri githubURL = Uri.parse(
+  'https://github.com/plotsklapps',
+);
+final Uri hashnodeURL = Uri.parse(
+  'https://plotsklapps.hashnode.dev/',
+);
+final Uri twitterURL = Uri.parse(
+  'https://twitter.com/plotsklapps',
+);
 
 /*SNACKBAR CONSTANTS*/
 const noAppleSorry = SnackBar(
