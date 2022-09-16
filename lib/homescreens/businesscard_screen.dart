@@ -109,7 +109,7 @@ class BusinessCardScreen extends StatelessWidget {
                   child: GestureDetector(
                     child: ListTile(
                       leading: Icon(
-                        FontAwesomeIcons.slack,
+                        FontAwesomeIcons.hashnode,
                         color: kOrangeFlame,
                       ),
                       title: const Text('Read my blog'),
@@ -126,7 +126,7 @@ class BusinessCardScreen extends StatelessWidget {
                         FontAwesomeIcons.twitter,
                         color: kOrangeFlame,
                       ),
-                      title: const Text('Find me on Twitter'),
+                      title: const Text('Follow me on Twitter'),
                     ),
                     onTap: () {
                       launchTwitter();

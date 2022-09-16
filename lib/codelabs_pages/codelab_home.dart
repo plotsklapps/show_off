@@ -10,16 +10,18 @@ class CodelabHomePage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              const SizedBox(height: 10.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Card(
                     child: Container(
-                      height: 200.0,
-                      width: 150.0,
+                      constraints: const BoxConstraints(
+                        maxHeight: 200.0,
+                        maxWidth: 150.0,
+                      ),
                       margin: const EdgeInsets.all(10.0),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text('Flutter Codelab #1'),
                           const Expanded(
@@ -29,6 +31,8 @@ class CodelabHomePage extends StatelessWidget {
                                 image: AssetImage(
                                   'assets/images/screenshots/flutter_codelabs_1.png',
                                 ),
+                                height: 2498.0,
+                                width: 1178.0,
                               ),
                             ),
                           ),
@@ -44,10 +48,13 @@ class CodelabHomePage extends StatelessWidget {
                   ),
                   Card(
                     child: Container(
-                      height: 200.0,
-                      width: 150.0,
+                      constraints: const BoxConstraints(
+                        maxHeight: 200.0,
+                        maxWidth: 150.0,
+                      ),
                       margin: const EdgeInsets.all(10.0),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text('Flutter Codelab #2'),
                           const Expanded(
@@ -57,6 +64,8 @@ class CodelabHomePage extends StatelessWidget {
                                 image: AssetImage(
                                   'assets/images/screenshots/flutter_codelabs_2.png',
                                 ),
+                                height: 2498.0,
+                                width: 1178.0,
                               ),
                             ),
                           ),
