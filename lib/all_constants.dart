@@ -54,6 +54,12 @@ final Uri hashnodeURL = Uri.parse(
 final Uri twitterURL = Uri.parse(
   'https://twitter.com/plotsklapps',
 );
+final Uri flutterCodeLabGist1 = Uri.parse(
+  'https://gist.github.com/plotsklapps/60791f17a3feeda97978618863f09e03',
+);
+final Uri flutterCodeLabGist2 = Uri.parse(
+  'https://gist.github.com/plotsklapps/27f4c7767d7e5a0af706945aaeb03735',
+);
 
 /*SNACKBAR CONSTANTS*/
 const noAppleSorry = SnackBar(

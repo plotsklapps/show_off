@@ -39,3 +39,4 @@ export 'package:showoff/bootcamp_pages/xylophone.dart';
 export 'package:showoff/bootcamp_pages/bmi_calc/bmi_calc_main.dart';
 export 'package:showoff/bootcamp_pages/bmi_calc/bmi_calc_constants.dart';
 export 'package:showoff/bootcamp_pages/bmi_calc/bmi_calc_customwidgets.dart';
+export 'package:showoff/codelabs_pages/codelab_home.dart';

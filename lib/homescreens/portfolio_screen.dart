@@ -298,36 +298,20 @@ class PortfolioScreen extends StatelessWidget {
                           const Padding(
                             padding: EdgeInsets.all(16.0),
                             child: Text(
-                              'Online codelabs by Google and RomanJustCodes are great resources to keep practising Flutter skills.\nI\'ve added them to this portfolio to show my consistency in expanding and maintaining my knowledge of Dart & Flutter!',
+                              'Online codelabs by Google and RomanJustCodes are great resources to keep practising Flutter skills.\nI\'ve added them to my GitHub Gists page to show my consistency in expanding and maintaining my knowledge of Dart & Flutter!',
                             ),
                           ),
-                          ButtonBar(
-                            alignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              GestureDetector(
-                                child: Image.asset(
-                                  'assets/icons/playstore_badge.png',
-                                  scale: 5.0,
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => CodelabHomePage(),
                                 ),
-                                onTap: () {
-                                  /*ALL_CONSTANTS.DART*/
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(noAppYet);
-                                },
-                              ),
-                              GestureDetector(
-                                child: Image.asset(
-                                  'assets/icons/appstore_badge.png',
-                                  scale: 8.0,
-                                ),
-                                onTap: () {
-                                  /*ALL_CONSTANTS.DART*/
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(noAppleSorry);
-                                },
-                              ),
-                            ],
+                              );
+                            },
+                            child: const Text('Check out Codelab Gists'),
                           ),
+                          const SizedBox(height: 8.0),
                         ],
                       ),
                     ),
