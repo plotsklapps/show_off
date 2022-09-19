@@ -60,6 +60,12 @@ final Uri flutterCodeLabGist1 = Uri.parse(
 final Uri flutterCodeLabGist2 = Uri.parse(
   'https://gist.github.com/plotsklapps/27f4c7767d7e5a0af706945aaeb03735',
 );
+final Uri flutterCodeLabGist3 = Uri.parse(
+  'https://gist.github.com/plotsklapps/4a8c1eb35125ed8923c80ba6fd408ded',
+);
+final Uri flutterBuildingUIGist1 = Uri.parse(
+  'https://gist.github.com/plotsklapps/929cd696ecf000c1d6aae72c9084366a',
+);
 
 /*SNACKBAR CONSTANTS*/
 const noAppleSorry = SnackBar(
