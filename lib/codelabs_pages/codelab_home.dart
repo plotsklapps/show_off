@@ -15,6 +15,7 @@ class CodelabHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    //FLUTTER CODELAB #1
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -48,6 +49,7 @@ class CodelabHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //FLUTTER CODELAB #2
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -86,6 +88,7 @@ class CodelabHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    //FLUTTER CODELAB #3
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -119,6 +122,7 @@ class CodelabHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //FLUTTER BUILDING UI #1
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -157,6 +161,7 @@ class CodelabHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    //FLUTTER BUILDING UI #2
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -190,6 +195,7 @@ class CodelabHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //FLUTTER BUILDING UI #3
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -206,6 +212,7 @@ class CodelabHomePage extends StatelessWidget {
                                 fit: BoxFit.scaleDown,
                                 child: Image(
                                   image: AssetImage(
+                                    //TODO: Add new screenshot!
                                     'assets/images/screenshots/flutter_building_ui_2.png',
                                   ),
                                   height: 2498.0,
@@ -217,7 +224,7 @@ class CodelabHomePage extends StatelessWidget {
                               onPressed: () {
                                 launchFlutterBuildingUIGist3();
                               },
-                              child: const Text('Work in progress'),
+                              child: const Text('Github Gist'),
                             ),
                           ],
                         ),

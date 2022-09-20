@@ -70,8 +70,7 @@ final Uri flutterBuildingUIGist2 = Uri.parse(
   'https://gist.github.com/plotsklapps/fcc1a060b0c370e64f9f86cce4aba99a',
 );
 final Uri flutterBuildingUIGist3 = Uri.parse(
-  //TODO: Change URI to new destination!
-  'https://gist.github.com/plotsklapps/fcc1a060b0c370e64f9f86cce4aba99a',
+  'https://gist.github.com/plotsklapps/2104e45c27d681baa5c35289291b4f70',
 );
 
 /*SNACKBAR CONSTANTS*/
