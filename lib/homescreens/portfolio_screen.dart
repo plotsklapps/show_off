@@ -292,7 +292,7 @@ class PortfolioScreen extends StatelessWidget {
                             ),
                             title: Text('Flutter CodeLabs'),
                             subtitle: Text(
-                              'Online Codelabs',
+                              'Online Education',
                             ),
                           ),
                           const Padding(
@@ -305,7 +305,7 @@ class PortfolioScreen extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) => CodelabHomePage(),
+                                  builder: (context) => const CodelabHomePage(),
                                 ),
                               );
                             },

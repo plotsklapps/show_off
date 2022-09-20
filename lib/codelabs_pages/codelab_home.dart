@@ -8,153 +8,225 @@ class CodelabHomePage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Card(
-                    child: Container(
-                      constraints: const BoxConstraints(
-                        maxHeight: 200.0,
-                        maxWidth: 150.0,
-                      ),
-                      margin: const EdgeInsets.all(10.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text('Flutter Codelab #1'),
-                          const Expanded(
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Image(
-                                image: AssetImage(
-                                  'assets/images/screenshots/flutter_codelabs_1.png',
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Codelab #1'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_codelabs_1.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
                                 ),
-                                height: 2498.0,
-                                width: 1178.0,
                               ),
                             ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              launchFlutterCodeLabGist1();
-                            },
-                            child: const Text('GitHub Gist'),
-                          ),
-                        ],
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterCodeLabGist1();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Card(
-                    child: Container(
-                      constraints: const BoxConstraints(
-                        maxHeight: 200.0,
-                        maxWidth: 150.0,
-                      ),
-                      margin: const EdgeInsets.all(10.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text('Flutter Codelab #2'),
-                          const Expanded(
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Image(
-                                image: AssetImage(
-                                  'assets/images/screenshots/flutter_codelabs_2.png',
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Codelab #2'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_codelabs_2.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
                                 ),
-                                height: 2498.0,
-                                width: 1178.0,
                               ),
                             ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              launchFlutterCodeLabGist2();
-                            },
-                            child: const Text('GitHub Gist'),
-                          ),
-                        ],
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterCodeLabGist2();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Card(
-                    child: Container(
-                      constraints: const BoxConstraints(
-                        maxHeight: 200.0,
-                        maxWidth: 150.0,
-                      ),
-                      margin: const EdgeInsets.all(10.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text('Flutter Codelab #3'),
-                          const Expanded(
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Image(
-                                image: AssetImage(
-                                  //TODO: Replace image!
-                                  'assets/images/screenshots/flutter_codelabs_2.png',
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Codelab #3'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_codelabs_3.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
                                 ),
-                                height: 2498.0,
-                                width: 1178.0,
                               ),
                             ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              launchFlutterCodeLabGist3();
-                            },
-                            child: const Text('GitHub Gist'),
-                          ),
-                        ],
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterCodeLabGist3();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  Card(
-                    child: Container(
-                      constraints: const BoxConstraints(
-                        maxHeight: 200.0,
-                        maxWidth: 150.0,
-                      ),
-                      margin: const EdgeInsets.all(10.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text('Flutter Building UI #1'),
-                          const Expanded(
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Image(
-                                image: AssetImage(
-                                  //TODO: Replace image!
-                                  'assets/images/screenshots/flutter_codelabs_2.png',
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Building UI #1'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_building_ui_1.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
                                 ),
-                                height: 2498.0,
-                                width: 1178.0,
                               ),
                             ),
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              launchFlutterBuildingUIGist1();
-                            },
-                            child: const Text('GitHub Gist'),
-                          ),
-                        ],
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterBuildingUIGist1();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Building UI #2'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_building_ui_2.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterBuildingUIGist2();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Building UI #3'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_building_ui_2.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterBuildingUIGist3();
+                              },
+                              child: const Text('Work in progress'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -182,6 +254,18 @@ class CodelabHomePage extends StatelessWidget {
   void launchFlutterBuildingUIGist1() async {
     if (!await launchUrl(flutterBuildingUIGist1)) {
       throw 'Could not launch $flutterBuildingUIGist1';
+    }
+  }
+
+  void launchFlutterBuildingUIGist2() async {
+    if (!await launchUrl(flutterBuildingUIGist2)) {
+      throw 'Could not launch $flutterBuildingUIGist2';
+    }
+  }
+
+  void launchFlutterBuildingUIGist3() async {
+    if (!await launchUrl(flutterBuildingUIGist3)) {
+      throw 'Could not launch $flutterBuildingUIGist3';
     }
   }
 }
