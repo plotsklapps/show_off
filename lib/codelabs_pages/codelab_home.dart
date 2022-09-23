@@ -212,8 +212,7 @@ class CodelabHomePage extends StatelessWidget {
                                 fit: BoxFit.scaleDown,
                                 child: Image(
                                   image: AssetImage(
-                                    //TODO: Add new screenshot!
-                                    'assets/images/screenshots/flutter_building_ui_2.png',
+                                    'assets/images/screenshots/flutter_building_ui_3.png',
                                   ),
                                   height: 2498.0,
                                   width: 1178.0,
@@ -225,6 +224,152 @@ class CodelabHomePage extends StatelessWidget {
                                 launchFlutterBuildingUIGist3();
                               },
                               child: const Text('Github Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    //FLUTTER CODING ROULETTE #1
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Coding Roulette #1'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_roulette_1.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterRouletteGist1();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    //FLUTTER CODING ROULETTE #2
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Coding Roulette #2'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_roulette_2.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterRouletteGist2();
+                              },
+                              child: const Text('Github Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    //FLUTTER CODING ROULETTE #3
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Coding Roulette #3'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_roulette_3.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterRouletteGist3();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    //FLUTTER CODING ROULETTE #2
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Coding Roulette #4'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_roulette_3.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterRouletteGist4();
+                              },
+                              child: const Text('Working on Gist'),
                             ),
                           ],
                         ),
@@ -273,6 +418,30 @@ class CodelabHomePage extends StatelessWidget {
   void launchFlutterBuildingUIGist3() async {
     if (!await launchUrl(flutterBuildingUIGist3)) {
       throw 'Could not launch $flutterBuildingUIGist3';
+    }
+  }
+
+  void launchFlutterRouletteGist1() async {
+    if (!await launchUrl(flutterRouletteGist1)) {
+      throw 'Could not launch $flutterRouletteGist1';
+    }
+  }
+
+  void launchFlutterRouletteGist2() async {
+    if (!await launchUrl(flutterRouletteGist2)) {
+      throw 'Could not launch $flutterRouletteGist2';
+    }
+  }
+
+  void launchFlutterRouletteGist3() async {
+    if (!await launchUrl(flutterRouletteGist3)) {
+      throw 'Could not launch $flutterRouletteGist3';
+    }
+  }
+
+  void launchFlutterRouletteGist4() async {
+    if (!await launchUrl(flutterRouletteGist4)) {
+      throw 'Could not launch $flutterRouletteGist4';
     }
   }
 }

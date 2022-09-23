@@ -72,6 +72,19 @@ final Uri flutterBuildingUIGist2 = Uri.parse(
 final Uri flutterBuildingUIGist3 = Uri.parse(
   'https://gist.github.com/plotsklapps/2104e45c27d681baa5c35289291b4f70',
 );
+final Uri flutterRouletteGist1 = Uri.parse(
+  'https://gist.github.com/plotsklapps/88f96944fbf2a8509a61e7746689db8f',
+);
+final Uri flutterRouletteGist2 = Uri.parse(
+  'https://gist.github.com/plotsklapps/15f6abde795336ecea4b2d37ae42a989',
+);
+final Uri flutterRouletteGist3 = Uri.parse(
+  'https://gist.github.com/plotsklapps/dfb5050793b5d28cbdba5bed57f5a610',
+);
+final Uri flutterRouletteGist4 = Uri.parse(
+  //TODO: Link aanpassen naar Flutter Coding Roulette #4!
+  'https://gist.github.com/plotsklapps/dfb5050793b5d28cbdba5bed57f5a610',
+);
 
 /*SNACKBAR CONSTANTS*/
 const noAppleSorry = SnackBar(
