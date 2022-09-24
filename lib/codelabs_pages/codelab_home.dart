@@ -341,7 +341,7 @@ class CodelabHomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //FLUTTER CODING ROULETTE #2
+                    //FLUTTER CODING ROULETTE #4
                     Card(
                       child: Container(
                         constraints: const BoxConstraints(
@@ -358,7 +358,7 @@ class CodelabHomePage extends StatelessWidget {
                                 fit: BoxFit.scaleDown,
                                 child: Image(
                                   image: AssetImage(
-                                    'assets/images/screenshots/flutter_roulette_3.png',
+                                    'assets/images/screenshots/flutter_roulette_4.png',
                                   ),
                                   height: 2498.0,
                                   width: 1178.0,

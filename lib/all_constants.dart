@@ -82,8 +82,7 @@ final Uri flutterRouletteGist3 = Uri.parse(
   'https://gist.github.com/plotsklapps/dfb5050793b5d28cbdba5bed57f5a610',
 );
 final Uri flutterRouletteGist4 = Uri.parse(
-  //TODO: Link aanpassen naar Flutter Coding Roulette #4!
-  'https://gist.github.com/plotsklapps/dfb5050793b5d28cbdba5bed57f5a610',
+  'https://gist.github.com/plotsklapps/6b6eb740a7be4713366be8286e6f306e',
 );
 
 /*SNACKBAR CONSTANTS*/
