@@ -377,6 +377,81 @@ class CodelabHomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    //FLUTTER ARCHITECTURE #1
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Architecture #1'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    //TODO: Add new image!
+                                    'assets/images/screenshots/flutter_roulette_4.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterArchitectureGist1();
+                              },
+                              child: const Text('GitHub Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    //FLUTTER ARCHITECTURE #2
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Architecture #2'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    //TODO: Add new image!
+                                    'assets/images/screenshots/flutter_roulette_4.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterArchitectureGist2();
+                              },
+                              child: const Text('Working on Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -442,6 +517,18 @@ class CodelabHomePage extends StatelessWidget {
   void launchFlutterRouletteGist4() async {
     if (!await launchUrl(flutterRouletteGist4)) {
       throw 'Could not launch $flutterRouletteGist4';
+    }
+  }
+
+  void launchFlutterArchitectureGist1() async {
+    if (!await launchUrl(flutterArchitectureGist1)) {
+      throw 'Could not launch $flutterArchitectureGist1';
+    }
+  }
+
+  void launchFlutterArchitectureGist2() async {
+    if (!await launchUrl(flutterArchitectureGist2)) {
+      throw 'Could not launch $flutterArchitectureGist2';
     }
   }
 }
