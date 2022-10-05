@@ -369,7 +369,7 @@ class CodelabHomePage extends StatelessWidget {
                               onPressed: () {
                                 launchFlutterRouletteGist4();
                               },
-                              child: const Text('Working on Gist'),
+                              child: const Text('Github Gist'),
                             ),
                           ],
                         ),
@@ -398,7 +398,7 @@ class CodelabHomePage extends StatelessWidget {
                                 child: Image(
                                   image: AssetImage(
                                     //TODO: Add new image!
-                                    'assets/images/screenshots/flutter_roulette_4.png',
+                                    'assets/images/screenshots/flutter_architecture_1.png',
                                   ),
                                   height: 2498.0,
                                   width: 1178.0,
@@ -433,7 +433,7 @@ class CodelabHomePage extends StatelessWidget {
                                 child: Image(
                                   image: AssetImage(
                                     //TODO: Add new image!
-                                    'assets/images/screenshots/flutter_roulette_4.png',
+                                    'assets/images/screenshots/flutter_architecture_2.png',
                                   ),
                                   height: 2498.0,
                                   width: 1178.0,
@@ -444,7 +444,7 @@ class CodelabHomePage extends StatelessWidget {
                               onPressed: () {
                                 launchFlutterArchitectureGist2();
                               },
-                              child: const Text('Working on Gist'),
+                              child: const Text('Github Gist'),
                             ),
                           ],
                         ),

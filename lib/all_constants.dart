@@ -85,10 +85,10 @@ final Uri flutterRouletteGist4 = Uri.parse(
   'https://gist.github.com/plotsklapps/6b6eb740a7be4713366be8286e6f306e',
 );
 final Uri flutterArchitectureGist1 = Uri.parse(
-  'https://gist.github.com/plotsklapps/e8ecf9ed44db9c6dbd8b98c903de3215',
+  'https://gist.github.com/plotsklapps/7d1feeb9713826ef7152a60d47627b2b',
 );
 final Uri flutterArchitectureGist2 = Uri.parse(
-  'https://gist.github.com/plotsklapps/3f22c911537d87da18081f9b93a9a434',
+  'https://gist.github.com/plotsklapps/a3b4181fa03b171b7bcf15a6b77c718f',
 );
 
 /*SNACKBAR CONSTANTS*/

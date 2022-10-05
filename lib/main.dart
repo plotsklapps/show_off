@@ -1,6 +1,7 @@
 import 'package:showoff/all_imports.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainEntry());
 }
 
