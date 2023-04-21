@@ -51,12 +51,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
       appBar: AppBar(
         centerTitle: true,
         leading: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            8.0,
-            0.0,
-            0.0,
-            8.0,
-          ),
+          padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
             child: const CircleAvatar(
               backgroundImage: AssetImage(
