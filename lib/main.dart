@@ -17,8 +17,12 @@ class MainEntry extends StatelessWidget {
       themeMode: ThemeMode.light,
       home: const SplashScreen(),
       routes: {
-        'homescreen': (context) => const HomeScreen(),
-        'emailsender': (context) => const EmailSender(),
+        'homescreen': (context) {
+          return const HomeScreen();
+        },
+        'emailsender': (context) {
+          return const EmailSender();
+        },
       },
     );
   }

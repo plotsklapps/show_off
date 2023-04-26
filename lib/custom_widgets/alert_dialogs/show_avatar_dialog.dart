@@ -3,30 +3,54 @@ import 'package:showoff/all_imports.dart';
 /*ALERT DIALOG FOR AVATARMENU*/
 showAvatarMenu(BuildContext context) {
   // set up the button
-  Widget stayButton = TextButton(
-    child: const Text('OK'),
+  Widget dismissButton = TextButton(
+    child: const Text('BACK'),
     onPressed: () {
       Navigator.pop(context);
     },
   );
 
-  Widget logoutButton = TextButton(
-    child: const Text('LOG OUT'),
-    onPressed: () {
-      Navigator.pushReplacementNamed(
-        context,
-        'homescreen',
-      );
-    },
-  );
-
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
-    title: const Text('Current user:'),
-    content: const Text('Login functionality coming soon!'),
+    title: const Text('Settings'),
+    content: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ListTile(
+          leading: const Icon(Icons.colorize),
+          title: const Text('Change ThemeColor'),
+          trailing: const Icon(Icons.arrow_forward_ios),
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              'avatar',
+            );
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.email),
+          title: const Text('Send Email'),
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              'emailsender',
+            );
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.settings),
+          title: const Text('Settings'),
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              'settings',
+            );
+          },
+        ),
+      ],
+    ),
     actions: [
-      logoutButton,
-      stayButton,
+      dismissButton,
     ],
   );
 
