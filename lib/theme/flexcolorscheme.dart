@@ -2,35 +2,38 @@ import 'package:showoff/all_imports.dart';
 
 ThemeData themeLight = FlexThemeData.light(
   scheme: FlexScheme.outerSpace,
-  surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
-  blendLevel: 20,
-  appBarStyle: FlexAppBarStyle.primary,
-  appBarOpacity: 0.95,
+  surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+  blendLevel: 12,
   subThemesData: const FlexSubThemesData(
-    blendOnLevel: 20,
+    blendOnLevel: 10,
     blendOnColors: false,
+    blendTextTheme: true,
+    useM2StyleDividerInM3: true,
+    thinBorderWidth: 2.0,
+    thickBorderWidth: 4.0,
     defaultRadius: 24.0,
   ),
   useMaterial3ErrorColors: true,
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
-// To use the playground font, add GoogleFonts package and uncomment
+  useMaterial3: true,
+  swapLegacyOnMaterial3: true,
   fontFamily: GoogleFonts.questrial().fontFamily,
 );
 
 ThemeData themeDark = FlexThemeData.dark(
   scheme: FlexScheme.outerSpace,
-  surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
-  blendLevel: 15,
-  appBarOpacity: 0.90,
+  surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
+  blendLevel: 13,
   subThemesData: const FlexSubThemesData(
-    blendOnLevel: 30,
+    blendOnLevel: 20,
+    useM2StyleDividerInM3: true,
     defaultRadius: 24.0,
+    thinBorderWidth: 2.0,
+    thickBorderWidth: 4.0,
   ),
   useMaterial3ErrorColors: true,
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
-// To use the playground font, add GoogleFonts package and uncomment
+  useMaterial3: true,
+  swapLegacyOnMaterial3: true,
   fontFamily: GoogleFonts.questrial().fontFamily,
 );
-// If you do not have a themeMode switch, uncomment this line
-// to let the device system mode control the theme mode:
-// themeMode: ThemeMode.system,
