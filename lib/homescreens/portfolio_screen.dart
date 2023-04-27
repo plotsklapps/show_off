@@ -214,6 +214,7 @@ class PortfolioScreen extends StatelessWidget {
                               1,
                               2,
                               3,
+                              4,
                             ].map((i) {
                               return Builder(
                                 builder: (BuildContext context) {
@@ -248,6 +249,14 @@ class PortfolioScreen extends StatelessWidget {
                                                 MaterialPageRoute(
                                                   builder: (context) =>
                                                       const BMIinput(),
+                                                ),
+                                              );
+                                            } else if (i == 4) {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const WeatherLoadingScreen(),
                                                 ),
                                               );
                                             }
