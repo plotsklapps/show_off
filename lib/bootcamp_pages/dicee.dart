@@ -4,10 +4,12 @@ class Dicee extends StatefulWidget {
   const Dicee({Key? key}) : super(key: key);
 
   @override
-  _DiceeState createState() => _DiceeState();
+  DiceeState createState() {
+    return DiceeState();
+  }
 }
 
-class _DiceeState extends State<Dicee> {
+class DiceeState extends State<Dicee> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 1;
 
@@ -77,7 +79,7 @@ class _DiceeState extends State<Dicee> {
                         16.0,
                       ),
                       child: Image.asset(
-                        'assets/images/dice/dice$leftDiceNumber.png',
+                        'assets/images/dicee/dice$leftDiceNumber.png',
                       ),
                     ),
                     onPressed: () {
@@ -101,7 +103,7 @@ class _DiceeState extends State<Dicee> {
                         16.0,
                       ),
                       child: Image.asset(
-                        'assets/images/dice/dice$rightDiceNumber.png',
+                        'assets/images/dicee/dice$rightDiceNumber.png',
                       ),
                     ),
                     onPressed: () {

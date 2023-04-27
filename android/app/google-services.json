@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "961435789802",
+    "project_id": "showoff-plotsklapps",
+    "storage_bucket": "showoff-plotsklapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961435789802:android:136bcccafc76ee5f5eaa93",
+        "android_client_info": {
+          "package_name": "nl.plotsklapps.showoff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961435789802-5rh2a3lmrqvucvtfrh82p39p882nl6su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRaooSOXORAA2TNF-r0FQBFDgU3lOnMJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961435789802-5rh2a3lmrqvucvtfrh82p39p882nl6su.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "961435789802-sugglnctejahasiu1h0m1fptj5v8vjpr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "nl.plotsklapps.showoff"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
