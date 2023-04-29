@@ -397,7 +397,6 @@ class CodelabHomePage extends StatelessWidget {
                                 fit: BoxFit.scaleDown,
                                 child: Image(
                                   image: AssetImage(
-                                    //TODO: Add new image!
                                     'assets/images/screenshots/flutter_architecture_1.png',
                                   ),
                                   height: 2498.0,
@@ -432,7 +431,6 @@ class CodelabHomePage extends StatelessWidget {
                                 fit: BoxFit.scaleDown,
                                 child: Image(
                                   image: AssetImage(
-                                    //TODO: Add new image!
                                     'assets/images/screenshots/flutter_architecture_2.png',
                                   ),
                                   height: 2498.0,

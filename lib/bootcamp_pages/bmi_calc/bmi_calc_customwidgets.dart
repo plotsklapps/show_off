@@ -17,12 +17,12 @@ class ReusableCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPress,
       child: Container(
-        child: cardChild,
         margin: const EdgeInsets.all(15.0),
         decoration: BoxDecoration(
           color: colour,
           borderRadius: BorderRadius.circular(10.0),
         ),
+        child: cardChild,
       ),
     );
   }
@@ -42,7 +42,6 @@ class RoundIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RawMaterialButton(
       elevation: 0.0,
-      child: Icon(icon),
       onPressed: onPressed,
       constraints: const BoxConstraints.tightFor(
         width: 56.0,
@@ -50,6 +49,7 @@ class RoundIconButton extends StatelessWidget {
       ),
       shape: const CircleBorder(),
       fillColor: kBackGroundGrey,
+      child: Icon(icon),
     );
   }
 }
@@ -103,17 +103,17 @@ class BottomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        color: kOrangeFlame,
+        margin: const EdgeInsets.only(top: 10.0),
+        padding: const EdgeInsets.only(bottom: 8.0),
+        width: double.infinity,
+        height: kBottomContainerHeight,
         child: Center(
           child: Text(
             buttonTitle,
             style: kLargeButtonTextStyle,
           ),
         ),
-        color: kOrangeFlame,
-        margin: const EdgeInsets.only(top: 10.0),
-        padding: const EdgeInsets.only(bottom: 8.0),
-        width: double.infinity,
-        height: kBottomContainerHeight,
       ),
     );
   }

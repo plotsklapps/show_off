@@ -43,10 +43,12 @@ class BMIinput extends StatefulWidget {
   const BMIinput({Key? key}) : super(key: key);
 
   @override
-  _BMIinputState createState() => _BMIinputState();
+  BMIinputState createState() {
+    return BMIinputState();
+  }
 }
 
-class _BMIinputState extends State<BMIinput> {
+class BMIinputState extends State<BMIinput> {
   Gender selectedGender = Gender.male;
   int height = 180;
   int weight = 60;

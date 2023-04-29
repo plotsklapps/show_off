@@ -4,10 +4,12 @@ class EmailSender extends StatefulWidget {
   const EmailSender({Key? key}) : super(key: key);
 
   @override
-  _EmailSenderState createState() => _EmailSenderState();
+  EmailSenderState createState() {
+    return EmailSenderState();
+  }
 }
 
-class _EmailSenderState extends State<EmailSender> {
+class EmailSenderState extends State<EmailSender> {
   late final TextEditingController _subjectCtrl;
   late final TextEditingController _recipientCtrl;
   late final TextEditingController _bodyCtrl;
@@ -18,9 +20,7 @@ class _EmailSenderState extends State<EmailSender> {
     final Email email = Email(
       body: _bodyCtrl.text,
       subject: _subjectCtrl.text,
-      recipients: [
-        _recipientCtrl.text
-      ],
+      recipients: [_recipientCtrl.text],
     );
 
     try {
