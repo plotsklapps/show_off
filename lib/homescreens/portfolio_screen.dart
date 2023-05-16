@@ -9,15 +9,15 @@ class PortfolioScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(
+            const Padding(
+              padding: EdgeInsets.fromLTRB(
                 24.0,
                 24.0,
                 24.0,
                 12.0,
               ),
               child: Row(
-                children: const [
+                children: [
                   Icon(FontAwesomeIcons.googlePlay),
                   Expanded(
                     child: Padding(

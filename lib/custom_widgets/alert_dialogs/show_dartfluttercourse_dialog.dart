@@ -12,9 +12,9 @@ showDartFlutterCourseDialog(BuildContext context) {
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: const Text('Dart & Flutter'),
-    content: SingleChildScrollView(
+    content: const SingleChildScrollView(
       child: Column(
-        children: const [
+        children: [
           Image(
             image: AssetImage(
               'assets/images/certificates/DartBeginners.jpg',

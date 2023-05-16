@@ -12,9 +12,9 @@ showFlutterBootcampDialog(BuildContext context) {
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: const Text('Flutter & Dart Bootcamp'),
-    content: SingleChildScrollView(
+    content: const SingleChildScrollView(
       child: Column(
-        children: const [
+        children: [
           Image(
             image: AssetImage(
               'assets/images/certificates/FlutterBootcamp2021Diploma.jpg',

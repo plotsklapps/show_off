@@ -12,9 +12,9 @@ showIonicAngularDialog(BuildContext context) {
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
     title: const Text('NHA Ionic & Angular'),
-    content: SingleChildScrollView(
+    content: const SingleChildScrollView(
       child: Column(
-        children: const [
+        children: [
           Image(
             image: AssetImage(
               'assets/images/certificates/IonicNHADiploma.jpg',
