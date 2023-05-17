@@ -90,6 +90,9 @@ final Uri flutterArchitectureGist1 = Uri.parse(
 final Uri flutterArchitectureGist2 = Uri.parse(
   'https://gist.github.com/plotsklapps/a3b4181fa03b171b7bcf15a6b77c718f',
 );
+final Uri flutterArchitectureGist3 = Uri.parse(
+  'https://gist.github.com/plotsklapps/286534abf10a66995bff9ff08b13e77d',
+);
 
 /*SNACKBAR CONSTANTS*/
 const noAppleSorry = SnackBar(

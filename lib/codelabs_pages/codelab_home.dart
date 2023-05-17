@@ -6,6 +6,12 @@ class CodelabHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'Codelab Gists',
+        ),
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -450,6 +456,45 @@ class CodelabHomePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    //FLUTTER ARCHITECTURE #3
+                    Card(
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 200.0,
+                          maxWidth: 150.0,
+                        ),
+                        margin: const EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Flutter Architecture #3'),
+                            const Expanded(
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Image(
+                                  image: AssetImage(
+                                    'assets/images/screenshots/flutter_architecture_2.png',
+                                  ),
+                                  height: 2498.0,
+                                  width: 1178.0,
+                                ),
+                              ),
+                            ),
+                            ElevatedButton(
+                              onPressed: () {
+                                launchFlutterArchitectureGist3();
+                              },
+                              child: const Text('Github Gist'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -527,6 +572,12 @@ class CodelabHomePage extends StatelessWidget {
   void launchFlutterArchitectureGist2() async {
     if (!await launchUrl(flutterArchitectureGist2)) {
       throw 'Could not launch $flutterArchitectureGist2';
+    }
+  }
+
+  void launchFlutterArchitectureGist3() async {
+    if (!await launchUrl(flutterArchitectureGist3)) {
+      throw 'Could not launch $flutterArchitectureGist3';
     }
   }
 }
